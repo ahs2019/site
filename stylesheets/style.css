@@ -26,7 +26,7 @@ body {
 }
 
 .parallax-container {
-    height: 100vh;
+    height: 93vh;
 }
 
 .parallax-container .section {
@@ -51,8 +51,8 @@ a {
 }
 
 .section--under-intro {
-    background-color: #415b65;
-    color: white;
+    background-color: #ececec;
+    color: #333333;
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -61,6 +61,10 @@ a {
 
 nav a {
     color: #777777 !important;
+}
+
+nav {
+    background: #F9B32F;
 }
 
 .brand-logo {
