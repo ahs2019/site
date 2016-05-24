@@ -42,7 +42,7 @@ p {
 }
 
 a {
-    color: #333333
+    color: #2c3e50
 }
 
 .container-fluid {
@@ -60,15 +60,15 @@ a {
 }
 
 nav a {
-    color: #777777 !important;
+    color: #fff !important;
 }
 
 nav {
-    background: #F9B32F;
+    background: #2c3e50;
 }
 
 .brand-logo {
-    color: #0e2134 !important;
+    color: #ececec !important;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.4rem !important;
