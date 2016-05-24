@@ -1,0 +1,110 @@
+/*
+------------------------------------------------------------------------------
+
+
+AHS CLASS OF 2019
+
+
+------------------------------------------------------------------------------
+*/
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: inherit;
+    margin: auto;
+    color: #434343;
+    min-height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.parallax-container {
+    height: 100vh;
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+.pagination .active {
+    background-color: #4fc3f7 !important;
+}
+
+p {
+    font-weight: inherit;
+}
+
+a {
+    color: #333333
+}
+
+.container-fluid {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.section--under-intro {
+    background-color: #415b65;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    min-height: 20vh;
+}
+
+nav a {
+    color: #777777 !important;
+}
+
+.brand-logo {
+    color: #0e2134 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem !important;
+}
+
+blockquote {
+    border-left: 5px solid #1b3255 !important;
+    font-size: 1.1rem;
+}
+
+.footer-stuck {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.collapse--title {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.news--date {
+    font-size: 1rem;
+    font-style: italic;
+    color: #777777;
+}
+
+.container-fluid {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.section--intro {
+    font-size: 3rem;
+    background: #2196f3;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    margin-bottom: 45px;
+}
+.card-panel {
+    height: 75px !important
+}
