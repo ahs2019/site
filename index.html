@@ -1,265 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" rel="stylesheet">
-    <link href="/web/stylesheets/main.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryan McBride</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:300' rel='stylesheet' type='text/css'>
-    <link rel="apple-touch-icon" sizes="60x60" href="/web/img/60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/web/img/72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/web/img/76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/web/img/114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/web/img/120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/web/img/144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/web/img/152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/web/img/180x180.png" />
-    <link rel="icon" type="image/png" href="/web/img/192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/web/img/96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/web/img/16x16.png" sizes="16x16" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Class of 2019</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/site/img/60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/site/img/72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/site/img/76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/site/img/114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/site/img/120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/site/img/144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/site/img/152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/site/img/180x180.png" />
+    <link rel="icon" type="image/png" href="/site/img/192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/site/img/96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/site/img/16x16.png" sizes="16x16" />
 </head>
 
 <body>
-    <header>
-        <div class="navbar-fixed">
-            <nav class="yellow darken-3">
-                <div class="nav-wrapper container-fluid">
-                    <a href="#home" class="brand-logo">ryanmcbride</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- Begin Navigation -->
+    <div class="navbar-fixed">
+        <nav role="navigation">
+            <div class="nav-wrapper">
+                <div class="container-fluid">
+                    <a id="logo-container" href="index.html" class="brand-logo active">ahs class of 2019</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#previousworks">Work</a></li>
-                        <li><a href="#languages">Languages</a></li>
-                        <li><a href="#webdev">Design</a></li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <img src="/web/img/ryan-profile.jpg" class="center-block" width="70%">
-                        <h5 class="center grey-text text-darken-2">Ryan McBride</h5>
-                        <h6 class="center grey-text text-darken-2">Boston, MA</h6>
-                        <a href="#previousworks">Work</a>
-                        <a href="#languages">Languages</a>
-                        <a href="#webdev">Design</a>
+                        <li><a href="#news">News and Updates</a></li>
+                        <li><a href="/site/gafed.html">Google Apps</a></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <div id="preloader"></div>
-    <section id="home" class="intro-section" title="Image: Andre Ermolaev">
-        <div class="valign-wrapper">
-            <div class="container-fluid">
-                <h1 class="valign white-text thin"><span class="hide-on-med-and-down mono white-text">&lt;title&gt;</span>Ryan McBride<span class="hide-on-med-and-down  mono white-text">&lt;/title&gt;</span></h1>
-                <h4 class="white-text thin">I'm a <i>front-end</i> web developer focused on <i>material design</i> and creating magic to enhance the web.</h4>
-                <br>
-                <div class="disappear">
-                    <a href="#introduction" style="position: absolute; left:35px;bottom:35px" class="hide-on-med-and-down btn-floating btn-large waves-effect waves-light yellow darken-3"><i class="material-icons">arrow_downward</i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="introduction">
-        <div class="row">
-            <div class="col l8 offset-l2">
-                <div class="card hoverable">
-                    <div class="card-content">
-                        <h3 class="center">Web Development</h3>
-                        <p class="center">As a web developer, I'm interested on getting your site on the web. Be it a personal site, business focused site, or anything else, <a href="mailto:ryanmcbride@syntax-solutions.xyz">send me an email</a>. Although I'm willing to work on a custom site, templates are available at <a href="http://syntax-solutions.xyz">Syntax Solutions</a> for free</p>
+                <ul id="nav-mobile" class="side-nav">
+                    <div class="container">
+                        <h3 class="black-text">Menu</h3>
                     </div>
-                    <div class="card-action">
-                        <a href="http://syntax-solutions.xyz" class="grey-text text-darken-2">Templates</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col l4 m12 s12 wgt-1 grey">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="previousworks">
-        <div class="container row">
-            <h2>Work</h2>
-            <p class="flow-text">Front-end web development is my thing. I spend most of my time making websites which are both user friendly and are effective in terms of communicating an idea. Below are a few examples of my latest work.</p>
-            <div class="col m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" alt="preview of a site made for Matthew Allen" src="/web/img/matthewallenpreview.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Matthew Allen<i class="material-icons right">more_vert</i></span>
-                        <p><a href="http://matthewallen.tk">Take Me There</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Presidential Campaign Site<i class="material-icons right">close</i></span>
-                        <p>This page was created by Ryan McBride and Shardul Joshi. This site in no way endorses any candidate for president in any year.</</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" alt="preview of Syntax Solutions" src="/web/img/syntaxsolutionspreview.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Syntax Solutions<i class="material-icons right">more_vert</i></span>
-                        <p><a href="http://syntax-solutions.github.io/site">Take Me There</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Syntax Solutions<i class="material-icons right">close</i></span>
-                        <p>Ryan and Shardul created this site to sell and provide templates and websites to people looking for a website that fits their needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="languages">
-        <div class="container">
-            <h2>&lt;lang&gt;</h2>
-            <div class="row">
-                <div class="col m6">
-                    <h3 class="center">HTML</h3>
-                    <p class="flow-text">I began learning HTML around the beginning of 8th grade by taking a course of <a href="http://codeacademy.com">Codeacademy</a>. The language inspired me to do more. To write more, to work more, and to be more. HTML, being the beautiful language it is, is useful in web development but still applicable in learning foreign languages.</p>
-                </div>
-                <div class="col m6">
-                    <h3 class="center">CSS</h3>
-                    <p class="flow-text">CSS is the language of style, one where your website becomes more than Times New Roman font with basic black and white color schemes. CSS becomes your animations, your colors, your margins, padding, and font. Like HTML, I learned CSS through a <a href="http://codeacademy.com">Codeacademy</a> course.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="webdev">
-        <div class="container">
-            <div class="col s12">
-                <ul class="tabs">
-                    <li class="tab col s6"><a class="blue-text waves-effect" href="#panelgroups">Panel Groups</a></li>
-                    <li class="tab col s6"><a class="blue-text waves-effect" href="#googlemaps">Google Maps</a></li>
+                    <li><a href="#news">News and Updates</a></li>
+                    <li><a href="/site/gafed.html">Google Apps</a></li>
                 </ul>
-                <div id="panelgroups">
-                    <h3>Panel Groups:</h3>
-                    <h5>Where to begin:</h5>
-                    <p>You'll probably want to set up your workspace first.</p>
-                    <p>Now, start by creating a series of <code>div</code>'s to contain your panels</p>
-
-                    <div id="bgcollapse" class="collapse">
-                        <h5>Here's what your HTML will look like:</h5>
-                        <p data-height="268" data-theme-id="22938" data-slug-hash="grmBod" data-default-tab="html" data-user="syntax-solutions" class="codepen">See the Pen <a href="http://codepen.io/syntax-solutions/pen/grmBod/">Block Groups</a> by Syntax Solutions (<a href="http://codepen.io/syntax-solutions">@syntax-solutions</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-                        <p>Note that box-shadow is used to create a shadow effect and that <code>!important</code> tells the browser to override any default or external stylesheet.</p>
+                <a href="#" data-activates="nav-mobile" class="button-collapse green-text text-lighten-1" style="padding-left: 3%"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <!-- End Navigation -->
+    <!-- Begin introductory section with parallax -->
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot valign-wrapper">
+            <div class="container-fluid">
+                <div>
+                    <div class="card-panel valign" style="max-width: 700px;opacity:90%!important">
+                        <h1 class="header valign">Andover High School</h1>
+                        <h5 class="header col s12 light valign"><i>Class of 2019</i></h5>
                     </div>
-                    <div class="row">
-                        <div class="col m4 center">
-                            <div class="card hoverable">
-                                <div class="card-content">
-                                    <i class="material-icons">business</i>
-                                    <span class="card-title">Block 1</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mattis nisl. Morbi et lorem tempor, aliquam mauris non, sollicitudin ipsum. Maecenas hendrerit ac metus.</p>
-                                    <hr>
-                                    <p>Purchase</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col m4 center">
-                            <div class="card hoverable">
-                                <div class="card-content">
-                                    <i class="material-icons">developer_mode</i>
-                                    <span class="card-title">Block 2</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mattis nisl. Morbi et lorem tempor, aliquam mauris non, sollicitudin ipsum. Maecenas hendrerit ac metus.</p>
-                                    <hr>
-                                    <p>Purchase
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col m4">
-                            <div class="card hoverable">
-                                <div class="card-content center">
-                                    <i class="material-icons">phone</i>
-                                    <span class="card-title">Block3</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mattis nisl. Morbi et lorem tempor, aliquam mauris non, sollicitudin ipsum. Maecenas hendrerit ac metus.</p>
-                                    <hr>
-                                    <p>Purchase</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="googlemaps">
-                    <h3>Google Maps:</h3>
-                    <h5>What is it?</h5>
-                    <p><a href="http://google.com">Google</a> has created an
-                        <abbr title="application program interface">API</abbr> to help developers apply elements provided by Google to enhance website UI and usability.</p>
-                    <h5>Where to begin:</h5>
-                    <p>Start by setting up your page with a container for your map.</p>
-                    <code>
-            &lt;div id="map" style="width:100%; height:400px"&gt;&lt;/div>
-            </code>
-                    <p>Next, you'll begin applying some JavaScript required by the Google Maps <abbr title="Application Programming Interface">API</abbr></p>
-
-                    <p data-height="268" data-theme-id="22938" data-slug-hash="XdMBgV" data-default-tab="html" data-user="syntax-solutions" class="codepen">See the Pen <a href="http://codepen.io/syntax-solutions/pen/XdMBgV/">Google Maps</a> by Syntax Solutions (<a href="http://codepen.io/syntax-solutions">@syntax-solutions</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-                    <p>Finally, you'll have to run a pre-determined script to access the Google Maps host.</p>
-                    <code>&lt;script src="https://maps.googleapis.com/maps/api/js">&lt;/script></code>
-
-
-                    <br>
-                    <br>
-                    <div id="map" style="width:100%;height:400px"></div>
-                    <script src="https://maps.googleapis.com/maps/api/js"></script>
-                    <script>
-                        var mapCanvas = document.getElementById("map");
-                        var mapOptions = {
-                            center: new google.maps.LatLng(51.5, -0.2),
-                            zoom: 10
-                        }
-                        var map = new google.maps.Map(mapCanvas, mapOptions);
-                    </script>
                 </div>
             </div>
         </div>
-        <footer class="page-footer blue-grey darken-2">
+        <div class="parallax">
+            <img src="/site/img/blue-color-scheme-material-design.jpg">
+        </div>
+        <div class="section--under-intro valign-wrapper">
+            <div class="container-fluid">
+                <h3 class="valign">Welcome</h3>
+                <h5 class="valign">Welcome to the official site of the AHS Class of 2019</h5>
+            </div>
+        </div>
+    </div>
+    <!-- End introductory section with parallax -->
+
+    <div class="container">
+        <div class="section">
+            <div>
+                <p class="flow-text">We're glad you could make it. This site is dedicated to the Andover High School class of 2019. Below, you can find our most recent updates.</p>
+            </div>
+            <h2 class="light" id="news">News and Updates</h2>
+            <div class="row">
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+
+                            <img class="activator" src="/site/img/wamesitlanes.png" alt="Wamesit Lanes">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Field Trip to Wamesit Lanes<i class="material-icons right">more_vert</i></span>
+                            <p><a href="http://wamesitlanes.com">Wamesit Lanes</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Field Trip to Wamesit Lanes<i class="material-icons right">close</i></span>
+                            <p>To celebrate the end of the school year, there will be a freshman only class trip to Wamesit Lanes Entertainment Center in
+                            Tewksbury on Friday, June 3 from 11:30am - 3:00pm.  There's a huge bowling alley, big arcade room, virtual reality golf simulators, 
+                            their exclusive Lazer Frenzy Experience, pizza/drinks, and a blast to be had with their friends!  The total cost for all of this is 
+                            $31.00.  Everyone must go on the buses provided to and from the trip. <a href="#wamesitlanestripnews" class="light-blue-text modal-trigger">Read more...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="wamesitlanestripnews" class="modal">
+                    <div class="modal-content">
+                      <h4>Field Trip to Wamesit Lanes<a href="#!" class="modal-action modal-close"><i class="material-icons right">close</i></a></h4>
+                      <p>To celebrate the end of the school year, there will be a freshman only class trip to Wamesit Lanes Entertainment Center in
+                        Tewksbury on Friday, June 3 from 11:30am - 3:00pm.  There's a huge bowling alley, big arcade room, virtual reality golf simulators, 
+                        their exclusive Lazer Frenzy Experience, pizza/drinks, and a blast to be had with their friends!  The total cost for all of this is 
+                        $31.00.  Everyone must go on the buses provided to and from the trip.</p>
+                        <p>Spots can be reserved on the trip all this week (May 23-27) by purchasing admission in their lunches at the Freshman Board table 
+                        in the cafe.  Students can also see either <a href="eabbott@aps1.net" class="tooltipped light-blue-text" data-position="top" data-delay="50" data-tooltip="Email Mr. Abbott">
+                        Mr. Abbott</a> or <a href="mailto:mduncan@aps1.net" class="tooltipped light-blue-text" data-position="top" data-delay="50" data-tooltip="Email Mr. 
+                        Duncan">Mr. Duncan</a> in the Guidance office. Cash or checks (made payable to "Andover High School") are accepted, and all students must also have 
+                        a <a href="#!" class="tooltipped light-blue-text" data-position="top" data-delay="50" data-tooltip="Download the form">signed parent consent field trip 
+                        form</a>. Additional copies can be found on the counter in the guidance department.</p>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+
+                            <img class="activator" src="/site/img/Facebook-big-blue.jpg" alt="Facebook">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Facebook Group<i class="material-icons right">more_vert</i></span>
+                            <p><a href="https://www.facebook.com/groups/606465626161549/">Facebook</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Facebook Group<i class="material-icons right">close</i></span>
+                            <p>The Class of 2019 Facebook group is run by the students. Please request access if you're interested in joining.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/site/img/regulations.jpg" alt="Student Handbook Cartoon">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Student Handbook<i class="material-icons right">more_vert</i></span>
+                            <p><a href="http://www.aps1.net/DocumentCenter/View/918">Handbook</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Student Handbook<i class="material-icons right">close</i></span>
+                            <p>Governed by the people, for the people. Check out the Student Handbook for the most up-to-date rules and regulations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/site/img/iandover.png" alt="iAndover">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">iAndover<i class="material-icons right">more_vert</i></span>
+                            <p><a href="https://sites.google.com/a/k12.andoverma.us/iandover-1-to-1-initiative/home">iAndover Home</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">iAndover<i class="material-icons right">close</i></span>
+                            <p>Freshman year, we implemented a new system where laptops and tablets would be used in the classroom environment to aid the learning process. Keep up-to-date on iAndover.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/site/img/sophos.png" alt="Sophos">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Network Safety<i class="material-icons right">more_vert</i></span>
+                            <p><a href="https://www.sophos.com/en-us/lp/sophos-home.aspx">Sophos Antivirus</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Sophos AntiVirus<i class="material-icons right">close</i></span>
+                            <p>To protect ourselves against malware, it's recommended that users install Antivirus software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light">
+
+                            <img class="activator" src="/site/img/andoverpublicschools.png" alt="Andover Public School">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Andover Public Schools<i class="material-icons right">more_vert</i></span>
+                            <p><a href="https://aps1.net">Andover Public Schools</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Andover Public Schools<i class="material-icons right">close</i></span>
+                            <p>For information on the Andover Public School System, please visit their website.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l8 offset-l2 s12">
+                    <div class="card-panel medium center">
+                        <a class="twitter-timeline" href="https://twitter.com/Andover_HS" data-widget-id="734864812258250752">Whoops! Look like the widget you requested is not available on this network.</a>
+                        <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="page-footer blue-grey lighten-5">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h5>Andover High School Class of 2019</h5>
+                    <p>This site is brought to you by the Class of 2019</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col l4 s12">
-                        <h5 class="white-text">My Pages</h5>
-                        <p class="grey-text text-lighten-4">I hope you've found exactly what you were looking for on this site. If you had hoped to reach Syntax Solutions, you will be redirected by clicking the button below.</p>
-                        <a href="http://syntax-solutions.xyz" class="black-text btn waves-effect waves-dark  blue-grey lighten-5">Syntax Solutions</a>
-
-                    </div>
-                    <div class="col l4 s12">
-                        <h5 class="white-text">Email Me</h5>
-                        <p class="grey-text text-lighten-4">Questions? Concerns? Suggestions? Email me. Please include your name.</p>
-                        <a class="black-text btn waves-effect waves-dark blue-grey lighten-5" href="mailto:ryanmcbride@syntax-solutions.xyz">Email</a>
-                    </div>
-                    <div class="col l4 s12" style="overflow: hidden;">
-                        <h5 class="white-text">Connect</h5>
-                        <p class="grey-text text-lighten-4">Find me on Github!
-                            <br>This page is hosted by <a href="http://github.io">Github Pages</a>. Styles from <a href="http://materializecss.com">MaterializeCSS</a></p>
-                        <a class="black-text btn waves-effect waves-dark blue-grey lighten-5" href="https://github.com/rymcbr">Github</a>
-                        <br>
-
-                    </div>
-                </div>
+                <a href="http://www.aps1.net">Andover Public Schools</a>
+                <a href="mailto:philip.conrad@aps1.net" class="right">Report a Violation</a>
             </div>
-            <div class="footer-copyright blue-grey darken-3">
-                <div class="container">
-                    Ryan McBride 2016
-                    <a class="grey-text text-lighten-4 right" href="https://aps1.net">Education</a>
-                </div>
-            </div>
-        </footer>
-        <!--Import jQuery before materialize.js-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="/web/js/materialize.js"></script>
-        <script src="/web/js/init.js"></script>
-        <script src="/web/js/loader.js"></script>
-        <script src="/web/scripts.js"></script>
+        </div>
+    </footer>
+    <!-- INCLUDE SCRIPTS BEFORE BODY ENDS -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/site/js/materialize.js"></script>
+    <script src="/site/js/init.js"></script>
 </body>
 
 </html>
