@@ -23,8 +23,14 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+  main {
+    flex: 1 0 auto;
+  }
 .parallax-container {
     height: 93vh;
 }
