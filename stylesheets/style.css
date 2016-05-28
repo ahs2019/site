@@ -127,6 +127,11 @@ blockquote {
   line-height: 1;
   text-align: center !important;
 }
+@media screen and (max-width: 768px) {
+    .styled div {
+        font-size: 5rem;
+    }
+}
 /* IE7 inline-block hack */
 *+html .styled div{
   display: inline;
