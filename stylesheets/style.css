@@ -61,7 +61,7 @@ a {
     color: #333333;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -1;
     min-height: 20vh;
 }
 
@@ -114,4 +114,39 @@ blockquote {
     padding-bottom: 100px;
     color: white;
     margin-bottom: 45px;
+}
+
+.styled{
+  margin-bottom: 50px;
+}
+.styled div {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 10rem;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center !important;
+}
+/* IE7 inline-block hack */
+*+html .styled div{
+  display: inline;
+  zoom: 1;
+}
+.styled div:first-child {
+  margin-left: 0;
+}
+.styled div span {
+  display: block;
+  border-top: 1px solid #cecece;
+  padding-top: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+}
+.count {
+    font-weight: 200 !important;
+}
+.ececec {
+    background: #ececec
 }
