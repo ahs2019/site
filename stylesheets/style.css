@@ -7,6 +7,8 @@ AHS CLASS OF 2019
 
 ------------------------------------------------------------------------------
 */
+
+@import url(https://fonts.googleapis.com/css?family=Sanchez);
 html {
     overflow-x: hidden;
 }
@@ -28,9 +30,10 @@ body {
     flex-direction: column;
 }
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
+
 .parallax-container {
     height: 93vh;
 }
@@ -112,42 +115,94 @@ blockquote {
     margin-bottom: 45px;
 }
 
-.styled{
-  margin-bottom: 50px;
+.styled {
+    margin-bottom: 50px;
 }
+
 .styled div {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 10rem;
-  font-weight: 100;
-  line-height: 1;
-  text-align: center !important;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 10rem;
+    font-weight: 100;
+    line-height: 1;
+    text-align: center !important;
 }
+
 @media screen and (max-width: 768px) {
     .styled div {
         font-size: 5rem;
     }
 }
+
+
 /* IE7 inline-block hack */
-*+html .styled div{
-  display: inline;
-  zoom: 1;
+
+*+html .styled div {
+    display: inline;
+    zoom: 1;
 }
+
 .styled div:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
+
 .styled div span {
-  display: block;
-  border-top: 1px solid #cecece;
-  padding-top: 3px;
-  font-size: 12px;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-align: left;
+    display: block;
+    border-top: 1px solid #cecece;
+    padding-top: 3px;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
 }
+
 .count {
     font-weight: 200 !important;
 }
+
 .ececec {
-    background: #ececec
+    background: #f6f6f6
+}
+
+.side-nav-title {
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.container--left {
+    width: 100% !important;
+    padding: 55px;
+}
+
+.container--right {
+    z-index: 8;
+    
+    background-size: cover;
+    height: 65vh;
+    width: 60%;
+    float: right;
+}
+
+.content-all {
+    max-height: 65vh;
+    overflow-y: hidden;
+    background: #f6f6f6;
+    font-family: 'Sanchez', serif;
+}
+
+.content-below-intro {
+    height: auto;
+    padding: 20px;
+    width: 100vw;
+    color: #fff;
+    font-family: 'Sanchez', serif;
+    text-align: center
+}
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    color: #757575
+}
+.parallax-container {
+    z-index: 8;
 }
