@@ -7,8 +7,8 @@
     <title>Class of 2019</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/site/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/site/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="apple-touch-icon" sizes="60x60" href="/site/img/60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/site/img/72x72.png" />
     <link rel="apple-touch-icon" sizes="76x76" href="/site/img/76x76.png" />
@@ -20,168 +20,327 @@
     <link rel="icon" type="image/png" href="/site/img/192x192.png" sizes="192x192" />
     <link rel="icon" type="image/png" href="/site/img/96x96.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/site/img/16x16.png" sizes="16x16" />
+    <script type="text/javascript">
+        $(function() {
+            var endDate = "August 31, 2016 0:00:00";
+
+            $('.countdown.simple').countdown({
+                date: endDate
+            });
+
+            $('.countdown.styled').countdown({
+                date: endDate,
+                render: function(data) {
+                    $(this.el).html("<div>" + this.leadingZeros(data.days, 3) + " <span> days </span></div><div>" + this.leadingZeros(data.hours, 2) + " <span> hrs </span></div><div>" + this.leadingZeros(data.min, 2) + " <span> min </span></div><div>" + this.leadingZeros(data.sec, 2) + " <span> sec </span></div>");
+                }
+            });
+
+            $('.countdown.callback').countdown({
+                date: +(new Date) + 10000,
+                render: function(data) {
+                    $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
+                },
+                onEnd: function() {
+                    $(this.el).addClass('ended');
+                }
+            }).on("click", function() {
+                $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
+            });
+
+            // End time for diff purposes
+            var endTimeDiff = new Date().getTime() + 15000;
+            // This is server's time
+            var timeThere = new Date();
+            // This is client's time (delayed)
+            var timeHere = new Date(timeThere.getTime() - 5434);
+            // Get the difference between client time and server time
+            var diff_ms = timeHere.getTime() - timeThere.getTime();
+            // Get the rounded difference in seconds
+            var diff_s = diff_ms / 1000 | 0;
+
+            var notice = [];
+            notice.push('Server time: ' + timeThere.toDateString() + ' ' + timeThere.toTimeString());
+            notice.push('Your time: ' + timeHere.toDateString() + ' ' + timeHere.toTimeString());
+            notice.push('Time difference: ' + diff_s + ' seconds (' + diff_ms + ' milliseconds to be precise). Your time is a bit behind.');
+
+            $('.offset-notice').html(notice.join('<br />'));
+
+            $('.offset-server .countdown').countdown({
+                date: endTimeDiff,
+                offset: diff_s * 1000,
+                onEnd: function() {
+                    $(this.el).addClass('ended');
+                }
+            });
+
+            $('.offset-client .countdown').countdown({
+                date: endTimeDiff,
+                onEnd: function() {
+                    $(this.el).addClass('ended');
+                }
+            });
+
+        });
+    </script>
 </head>
 
 <body>
     <!-- Begin Navigation -->
-    <div class="navbar-fixed">
-        <nav role="navigation">
+    <div class="navback z-depth-1">
+        <nav role="navigation" class="z-depth-0">
             <div class="nav-wrapper">
-                <div class="container-fluid">
-                    <a id="logo-container" href="/site/" class="brand-logo active">ahs class of 2019</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="/site/index.html#news">News and Updates</a></li>
-                        <li><a href="/site/gafed.html">Google Apps</a></li>
-                        <li><a href="/site/countdown.html">Countdown</a></li>
-                    </ul>
-                </div>
+
+                <a href="#" data-activates="nav-mobile" class="button-collapse white-text" style="padding-left: 3%"><i class="material-icons">menu</i></a>
+                <a id="logo-container" style="padding-left: 3%" href="/site/" class="brand-logo active inline"><i class="material-icons inline vcenter hide-on-med-and-down">home</i> Class of 2019</a>
+                <br>
+                <br>
                 <ul id="nav-mobile" class="side-nav">
                     <div class="container">
-                        <h3 class="black-text">Menu</h3>
+                        <h3 class="center">Menu</h3>
                     </div>
                     <a href="/site/index.html#news">News and Updates</a>
                     <a href="/site/gafed.html">Google Apps</a>
                     <a href="/site/countdown.html">Countdown</a>
 
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse green-text text-lighten-1" style="padding-left: 3%"><i class="material-icons">menu</i></a>
+            </div>
+            <div class="container-fluid">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#h">Home</a></li>
+                    <li class="tab col s3"><a href="#g">Google Apps</a></li>
+                    <li class="tab col s3"><a href="#c">Countdown</a></li>
+                    <li class="tab col s3"></li>
+                    <li class="tab col s3"></li>
+                </ul>
             </div>
         </nav>
     </div>
     <!-- End Navigation -->
-    <!-- Begin introductory section with parallax -->
-   <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot valign-wrapper">
-            <div class="container-fluid">
-                <div>
-                    <div class="card-panel valign" style="max-width: 700px;opacity:90%!important">
-                        <h1 class="header valign">Andover High School</h1>
-                        <h5 class="header col s12 light valign"><i>Class of 2019</i></h5>
-                    </div>
+    <br>
+
+
+    <div class="row">
+        <div class="col m3">
+            <div class="card">
+                <div class="card-content">
+                    <img src="http://andover.patriotproperties.com/images/andover.jpg" width="55px;" class="vcenter"><span class="card-title">&nbsp;&nbsp;Class of 2019</span>
+                    <ul>
+                        <li><a href="http://aps1.net"> Andover Public Schools<i class="material-icons vcenter">chevron_right</i></a></li>
+                        <li><a href="http://www.aps1.net/Directory.aspx?DID=8"> AHS Faculty<i class="material-icons vcenter">chevron_right</i></a></li>
+                        <li><a href="http://andoverma.gov"> Andover, Town of<i class="material-icons vcenter">chevron_right</i></a></li>
+                        <li><a href="http://andoverps.net"> Andover Public Safety<i class="material-icons vcenter">chevron_right</i></a></li>
+                        <li><a href="https://weather.com/weather/tenday/l/01810:4:US"> Andover Weather Conditions<i class="material-icons vcenter">chevron_right</i></a></li>
+                        <li><a href="https://scholar.google.com"> Google Scholar<i class="material-icons vcenter">chevron_right</i></a></li>
+
+                    </ul>
+                    <i class="material-icons circle yellow darken-2 white-text" style="padding:8px;">event</i><span class="card-title">&nbsp;&nbsp;Events</span>
+                    <br>
+                    <span class="grey-text">Upcoming</span>
+                    <br>
+                    <br>
+                    <div class="divider"></div>
+                    <br>
+                    <h5 class="light">First Day <span class="blue-text">@ 7:45</span><br></h5>
+                    <p class="grey-text">Wed. August 31</p>
+                    <br>
+                    <br>
+                    <div class="divider"></div>
+                    <br>
+                    <h5 class="light">Labor Day <span class="blue-text">no school</span><br></h5>
+                    <p class="grey-text">Mon. September 5</p>
                 </div>
             </div>
         </div>
-        <div class="parallax">
-            <img src="/site/img/blue-color-scheme-material-design.jpg">
-        </div>
-        <div class="section--under-intro valign-wrapper">
+        <div class="col m8">
             <div class="container-fluid">
-                <h3 class="valign">Welcome</h3>
-                <h5 class="valign">Welcome to the official site of the AHS Class of 2019</h5>
+                <div id="h">
+                    <div class="section">
+                        <h2 class="thin" id="news">News and Updates</h2>
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <div class="card small">
+                                    <div class="card-image waves-effect waves-block waves-light">
+
+                                        <img class="activator" src="/img/Facebook-big-blue.jpg" alt="Facebook">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">Facebook Group<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="https://www.facebook.com/groups/606465626161549/">Facebook</a></p>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Facebook Group<i class="material-icons right">close</i></span>
+                                        <p>The Class of 2019 Facebook group is run by the students. Please request access if you're interested in joining.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="card small">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/img/regulations.jpg" alt="Student Handbook Cartoon">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">Student Handbook<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="http://www.aps1.net/DocumentCenter/View/918">Handbook</a></p>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Student Handbook<i class="material-icons right">close</i></span>
+                                        <p>Governed by the people, for the people. Check out the Student Handbook for the most up-to-date rules and regulations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="card small">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/img/iandover.png" alt="iAndover">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">iAndover<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="https://sites.google.com/a/k12.andoverma.us/iandover-1-to-1-initiative/home">iAndover Home</a></p>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">iAndover<i class="material-icons right">close</i></span>
+                                        <p>Freshman year, we implemented a new system where laptops and tablets would be used in the classroom environment to aid the learning process. Keep up-to-date on iAndover.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="card small">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/img/sophos.png" alt="Sophos">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">Network Safety<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="https://www.sophos.com/en-us/lp/sophos-home.aspx">Sophos Antivirus</a></p>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Sophos AntiVirus<i class="material-icons right">close</i></span>
+                                        <p>To protect ourselves against malware, it's recommended that users install Antivirus software.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="card small">
+                                    <div class="card-image waves-effect waves-block waves-light">
+
+                                        <img class="activator" src="/img/andoverpublicschools.png" alt="Andover Public School">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">Andover Public Schools<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="https://aps1.net">Andover Public Schools</a></p>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Andover Public Schools<i class="material-icons right">close</i></span>
+                                        <p>For information on the Andover Public School System, please visit their website.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="card-panel medium center">
+                                    <a class="twitter-timeline" href="https://twitter.com/Andover_HS" data-widget-id="734864812258250752">Whoops! Look like the widget you requested is not available on this network.</a>
+                                    <script>
+                                        ! function(d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0],
+                                                p = /^http:/.test(d.location) ? 'http' : 'https';
+                                            if (!d.getElementById(id)) {
+                                                js = d.createElement(s);
+                                                js.id = id;
+                                                js.src = p + "://platform.twitter.com/widgets.js";
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }
+                                        }(document, "script", "twitter-wjs");
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="col l8 offset-l2 s12">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="g">
+                    <div class="row">
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/google.jpg" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="https://scholar.google.com">Scholar</a>
+              </h4>
+                            </div>
+                        </div>
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/google-drive.jpg" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="https://drive.google.com/drive/my-drive">Drive</a>
+              </h4>
+                            </div>
+                        </div>
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/gmail.png" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+              </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/google-calendar.png" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="http://calendar.k12.andoverma.us/">Calendar</a>
+              </h4>
+                            </div>
+                        </div>
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/google-contacts.png" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="https://www.google.com/contacts/a/k12.andoverma.us">Contacts</a>
+              </h4>
+                            </div>
+                        </div>
+                        <div class="col s6 m3 l4">
+                            <div class="card-panel gapp grey lighten-5 z-depth-1">
+                                <div class="row valign-wrapper">
+
+                                    <img src="/img/sites.png" alt="Google" class="circle valign center-block responsive-img" width="30%">
+                                    <br>
+                                </div>
+                                <h4 class="black-text center"><a href="http://sites.k12.andoverma.us/">Sites</a>
+              </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="c">
+                    <div class="container center">
+                        <h2 class="count">First Day of School</h2>
+
+                        <h3 class="count">August 31, 2016</h3>
+                        <div class="countdown styled"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- End introductory section with parallax -->
 
-    <div class="container">
-        <div class="section">
-            <div>
-                <p class="flow-text">We're glad you could make it. This site is dedicated to the Andover High School class of 2019. Below, you can find our most recent updates.</p>
-            </div>
-            <h2 class="light" id="news">News and Updates</h2>
-            <div class="row">
-                <div class="col l6 s12">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-
-                            <img class="activator" src="/site/img/Facebook-big-blue.jpg" alt="Facebook">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Facebook Group<i class="material-icons right">more_vert</i></span>
-                            <p><a href="https://www.facebook.com/groups/606465626161549/">Facebook</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Facebook Group<i class="material-icons right">close</i></span>
-                            <p>The Class of 2019 Facebook group is run by the students. Please request access if you're interested in joining.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l6 s12">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/site/img/regulations.jpg" alt="Student Handbook Cartoon">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Student Handbook<i class="material-icons right">more_vert</i></span>
-                            <p><a href="http://www.aps1.net/DocumentCenter/View/918">Handbook</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Student Handbook<i class="material-icons right">close</i></span>
-                            <p>Governed by the people, for the people. Check out the Student Handbook for the most up-to-date rules and regulations</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l6 s12">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/site/img/iandover.png" alt="iAndover">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">iAndover<i class="material-icons right">more_vert</i></span>
-                            <p><a href="https://sites.google.com/a/k12.andoverma.us/iandover-1-to-1-initiative/home">iAndover Home</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">iAndover<i class="material-icons right">close</i></span>
-                            <p>Freshman year, we implemented a new system where laptops and tablets would be used in the classroom environment to aid the learning process. Keep up-to-date on iAndover.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l6 s12">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/site/img/sophos.png" alt="Sophos">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Network Safety<i class="material-icons right">more_vert</i></span>
-                            <p><a href="https://www.sophos.com/en-us/lp/sophos-home.aspx">Sophos Antivirus</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Sophos AntiVirus<i class="material-icons right">close</i></span>
-                            <p>To protect ourselves against malware, it's recommended that users install Antivirus software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l6 s12">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-
-                            <img class="activator" src="/site/img/andoverpublicschools.png" alt="Andover Public School">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Andover Public Schools<i class="material-icons right">more_vert</i></span>
-                            <p><a href="https://aps1.net">Andover Public Schools</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Andover Public Schools<i class="material-icons right">close</i></span>
-                            <p>For information on the Andover Public School System, please visit their website.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l6 s12">
-                    <div class="card-panel medium center">
-                        <a class="twitter-timeline" href="https://twitter.com/Andover_HS" data-widget-id="734864812258250752">Whoops! Look like the widget you requested is not available on this network.</a>
-                        <script>
-                            ! function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0]
-                                    , p = /^http:/.test(d.location) ? 'http' : 'https';
-                                if (!d.getElementById(id)) {
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = p + "://platform.twitter.com/widgets.js";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }
-                            }(document, "script", "twitter-wjs");
-                        </script>
-                    </div>
-                </div>
-                <div class="col l8 offset-l2 s12">
-                    
-                </div>
-
-            </div>
-
-        </div>
-    </div>
 
     <footer class="page-footer blue-grey lighten-5">
         <div class="container">
@@ -201,8 +360,8 @@
     </footer>
     <!-- INCLUDE SCRIPTS BEFORE BODY ENDS -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/site/js/materialize.js"></script>
-    <script src="/site/js/init.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
 </body>
 
 </html>
