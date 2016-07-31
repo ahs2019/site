@@ -7,6 +7,7 @@ AHS CLASS OF 2019
 
 ------------------------------------------------------------------------------
 */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 @import url(https://fonts.googleapis.com/css?family=Sanchez);
 html {
@@ -69,13 +70,12 @@ a {
 }
 
 nav {
-    background: #2c3e50;
+    background: #607D8B !important;
 }
 
 .brand-logo {
-    color: #ececec !important;
-    font-weight: 600;
-    text-transform: uppercase;
+    color: #fff !important;
+    font-weight: 500 !important;
     font-size: 1.4rem !important;
 }
 
@@ -205,4 +205,44 @@ blockquote {
 }
 .parallax-container {
     z-index: 8;
+}
+.tabs {
+    background: transparent !important;
+}
+.tabs a {
+    color: white !important;
+    font-weight: 500 !important;
+    text-transform: uppercase!important;
+}
+.tabs a:hover {
+    background: #607D8B !important;
+}
+.card .grey-text {
+    margin-left: 55px;
+}
+.button-collapse i {
+    font-size: 1.6rem !important;
+    margin-right: 20px;
+}
+nav-wrapper {
+    z-index: 500;
+}
+.navback {
+    background: #607D8B !important;
+    height: 112px;
+}
+.vcenter {
+    vertical-align: middle;
+}
+.card-content li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin: 25px;
+}
+.card-content li a {
+    color: #5C6BC0;
+}
+.inline {
+    display: inline-block !important;
 }
