@@ -1,104 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <title>Class of 2019</title>
-    <!-- CSS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="apple-touch-icon" sizes="60x60" href="/site/img/60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/site/img/72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/site/img/76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/site/img/114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/site/img/120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/site/img/144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/site/img/152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/site/img/180x180.png" />
-    <link rel="icon" type="image/png" href="/site/img/192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/site/img/96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/site/img/16x16.png" sizes="16x16" />
-
+    <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class of 2019</title>
 </head>
 
 <body>
-    <!-- Begin Navigation -->
-    <nav role="navigation" class="z-depth-1">
-        <div class="nav-wrapper"> <a href="#" data-activates="slide-out" class="button-collapse white-text" style="padding-left: 3%"><i class="material-icons">menu</i></a>
-            <a id="logo-container" style="padding-left: 3%" href="/site/" class="brand-logo active inline"> Class of 2019</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/site/">Home</a></li>
-                <li><a href="gafed.html">Google Apps</a></li>
-                <li><a href="t.html">Twitter</a></li>
-            </ul>
-        </div>
-        <ul id="slide-out" class="side-nav fixed">
-            <li>
-                <div class="userView">
-                    <div class="background" style="background:#607D8B"></div>
-                    <a href="#!user"><img class="circle" src="http://bostonsportsu18.com/wp-content/uploads/2012/01/warriors.jpg"></a>
-                    <a href="#!name"><span class="white-text name">Andover High School</span></a>
-                    <a href="#!email"><span class="white-text email">Class of 2019</span></a>
-                </div>
-            </li>
-            <li><a href="http://aps1.net">Andover Public Schools</a></li>
-            <li><a href="http://www.aps1.net/Directory.aspx?DID=8">AHS Faculty</a></li>
-            <li><a href="http://andoverma.gov">Andover, Town Of</a></li>
-            <li><a href="http://andoverps.net">Andover Public Safety</a></li>
-        </ul>
-    </nav>
-    <!-- End Navigation -->
+    <div class="navbar-fixed">
+        <div style="width:100%; height:10px; background:#616161;position:fixed"></div>
+        <nav role="navigation" class="z-depth-0">
+
+            <div class="nav-wrapper container-fluid"> <a id="logo-container" href="index.html" class="brand-logo">AHS Class of 2019</a>
+                <a href="#" data-activates="nav-mobile" class="hide-on-large-only button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+            <ul class="side-nav fixed" id="nav-mobile">
+                <li>
+                    <div class="userView"> <img class="circle responsive-img center-block" src="img/andover.png" style="width: 100px; height:100px"> </div>
+                    <br> </li> <a href="#!"><i class="material-icons inline">home</i> &nbsp;<span class="inline"> Home</span></a> <a href="#modal1" class="modal-trigger"><i class="material-icons inline">navigation</i> &nbsp;<span class="inline"> Map</span></a> <a href="#updates"><i class="material-icons inline">new_releases</i> &nbsp;<span class="inline"> Updates</span></a> <a href="http://aps1.net"><i class="material-icons inline">business</i> &nbsp;Andover Public Schools</a> <a href="http://www.aps1.net/index.aspx?nid=304"><i class="material-icons inline">trending_up</i> &nbsp;<span class="inline"> Athletics</span></a> </ul>
+        </nav>
+    </div>
+    <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; left: 24px;">
+        <a onclick="goBack()" class="btn-floating btn-large blue darken-2"> <i class="material-icons">arrow_back</i></a>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <main>
-        <br>
-        <div class="row container-fluid">
-            <div class="col m12">
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="hero-content" id="updates">
+                    <br>
+                    <h3 class="light white-text">Class of 2019 <i class="material-icons">keyboard_arrow_downward</i></h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m2 container right">
+                <a class="chip center" href="http://k12.andoverma.us">Google Apps</a>
+                <br>
+                <a class="chip center" href="http://ma-andover.myfollett.com">Aspen</a>
+                <br>
+                <a class="chip center" href="http://www.aps1.net/calendar.aspx">Calendar</a>
+                <br>
+                <a class="chip center" href="http://twitter.com/andover_hs">Twitter</a>
+            </div>
+            <div class="col m10">
                 <div class="container-fluid">
-                    <div id="h">
-                        <div class="section">
-                            <h2 class="count center" id="news">News and Updates</h2>
-                            <br>
-                            <br>
-                            <div class="row">
-                                <div class="col l6 s12"> <img class="responsive-img" src="img/Facebook-big-blue.jpg" width="90%" alt="Facebook"> </div>
-                                <div class="col l6 s12">
-                                    <h5>Facebook Group</h5>
-                                    <p>The Class of 2019 Facebook group is run by the students. Please request access if you're interested in joining.</p> <a href="https://www.facebook.com/groups/606465626161549/" class="flat">Request Access</a> </div>
+                    <h3 class="header light">What's New <i class="material-icons">new_releases</i></h3>
+                    <div class="row container-fluid">
+                        <a href="http://www.mhl.org/">
+                            <div style="height:300px !important" class="product-tile waves-effect waves-light">
+                                <div>
+                                    <div class="container-fluid">
+                                        <h1 class="mono-text title">Memorial Hall Library<i class="material-icons right white-text">chevron_right</i></h1>
+
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col l6 s12">
-                                    <h5>Student Handbook</h5>
-                                    <p>Governed by the people, for the people. Check out the Student Handbook for the most up-to-date rules and regulations</p> <a href="http://www.aps1.net/DocumentCenter/View/918" class="flat">Handbook</a> </div>
-                                <div class="col l6 s12"> <img class="activator" width="80%" src="img/regulations.jpg" alt="Student Handbook Cartoon"> </div>
-                            </div>
-                            <div class="row">
-                                <div class="col l6 s12"> <img class="img-responsive" width="80%" src="img/iandover.png" alt="iAndover"> </div>
-                                <div class="col l6">
-                                    <h5>iAndover</h5>
-                                    <p>Freshman year, we implemented a new system where laptops and tablets would be used in the classroom environment to aid the learning process. Keep up-to-date on iAndover.</p> <a class="flat" href="https://sites.google.com/a/k12.andoverma.us/iandover-1-to-1-initiative/home">iAndover Home</a> </div>
-                            </div>
+                        </a>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col m6">
+                            <a href="http://www.aps1.net/DocumentCenter/View/918">
+                                <div style="height:200px !important" class="handbook-tile waves-effect waves-light">
+                                    <div class="container-fluid">
+                                        <h1 class="mono-text black-text title">Student Handbook<i class="material-icons right black-text">chevron_right</i></h1>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
+                        <div class="col m6">
+                            <a href="https://www.facebook.com/groups/606465626161549/">
+                                <div style="height:200px !important" class="facebook-tile waves-effect waves-light">
+                                    <div class="container-fluid">
+                                        <h1 class="mono-text white-text title">Facebook Group<i class="material-icons right white-text">chevron_right</i></h1>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="page-footer blue-grey lighten-5">
+        <footer class="page-footer grey darken-1">
             <div class="container">
                 <div class="row">
-                    <div>
-                        <h5>Andover High School Class of 2019</h5>
-                        <p>This site is brought to you by the Class of 2019</p>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">About Us</h5>
+                        <p class="grey-text text-lighten-4">Stuff</p>
                     </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Email Me</h5>
+                        <p class="grey-text text-lighten-4">Questions? Concerns? Suggestions?</p>
+                    </div>
+                    <div class="col l4 s12" style="overflow: hidden;">
+                        <h5 class="white-text">Connect</h5>
+                        <p class="grey-text text-lighten-4">Find us on social media</p>
+                        <br> </div>
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="container"> <a href="http://www.aps1.net">Andover Public Schools</a> <a href="mailto:philip.conrad@aps1.net" class="right tooltipped" data-position="top" data-delay="50" data-tooltip="Report a Violation of web safety standards">Report a Violation</a> </div>
+                <div class="container"> Syntax Solutions 2016 <a class="grey-text text-lighten-4 right" href="#!">Privacy</a> </div>
             </div>
         </footer>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="light">80 Shawsheen Rd, Andover, MA</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.197587108668!2d-71.15768478430394!3d42.65716812427887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3086420d5171b%3A0x4e575d296a9b71ca!2sAndover+High+School!5e0!3m2!1sen!2sus!4v1472392901151" width="100%" height="89%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-dark btn-flat">Close</a> </div>
+        </div>
     </main>
-    <!-- INCLUDE SCRIPTS BEFORE BODY ENDS -->
+    <!--Import jQuery before materialize.js-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="js/init.js"></script>
