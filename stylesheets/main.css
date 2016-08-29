@@ -1,0 +1,173 @@
+body {
+    color: #212121;
+    background: #eeeeee;
+    float: none;
+    width: 100vw;
+    overflow-x: hidden
+}
+h3, h5 {
+    color: #212121 !important;
+}
+
+.container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav {
+    background: #757575  !important;
+}
+
+.flat  {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ff6e40
+}
+
+.hr {
+    border-bottom: solid 1px #ececec !important;
+}
+
+.inline {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+.vcenter {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    display: inline-block;
+}
+
+
+.brand-logo {
+    font-weight: 500;
+    font-size: 20px !important;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #039BE5 !important
+}
+
+.around-nav {
+    background: #437af8;
+}
+
+.hero {
+    background: #9e9e9e;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.hero-content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
+    font-weight: 300 !important;
+}
+.button-collapse, .button-collapse i {
+    font-size: 25px !important;
+}
+.show {
+    display: block !important;
+}
+.abs-pos h3, .abs-pos h5 {
+    color: #ff6e40 !important;
+}
+.abs-pos {
+    top: 250px;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: auto;;
+    
+}
+main, header {
+    align-content: center;
+    margin-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) { 
+        main, header {
+        margin-left: 0;
+      }
+    }
+
+p {
+    color: #757575
+}
+.side-nav a {
+    padding: 20px !important;
+    margin-left: 20px;
+    color: #404040 !important;
+}
+.side-nav {
+    position: fixed;
+    top:74px;
+    background: #e0e0e0 !important;
+}
+.float-right {
+    float: right !important;
+    text-align: right !important;
+
+}
+.side-nav a:hover {
+    background: transparent !important;
+}
+nav {
+    position: fixed;
+    top: 10px;
+}
+.highlight {
+    background-color: #2B2B87;
+    width: 420px;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    text-align: center;
+    cursor: pointer
+}
+
+.highlight:hover {
+    background: #3949AB;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    color: #fff;
+}
+.mono-text {
+    color: white;
+    z-index: 33;
+    font-size: 17px !important;
+    
+}
+.mono-text.title {
+    font-size: 24px !important;
+}
+.product-tile {
+    background: url(https://raw.githubusercontent.com/ahs2019/site/gh-pages/img/MassOther_0016a.jpg) center center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 3px;
+}
+.handbook-tile {
+    background: url(http://ahs2019.github.io/site/img/regulations.jpg) center center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 3px;
+}
+.facebook-tile {
+    background: url(https://media.sproutsocial.com/uploads/2014/08/Facebook_Advertising-Guide-00.png) center center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 3px;
+}
